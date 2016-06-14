@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tracks</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<!--Login Section-->
+
+<!-- Modal -->
+                    <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <br>
+                                <div class="bs-example bs-example-tabs">
+                                    <ul id="myTab" class="nav nav-tabs">
+                                        <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+                                        <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+                                        <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+                                    </ul>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="myTabContent" class="tab-content">
+                                        <div class="tab-pane fade in" id="why">
+                                            <p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p>
+                                            <p><br> Please contact <a mailto:href="JoeSixPack@Sixpacksrus.com"></a>JoeSixPack@Sixpacksrus.com
+                                            </p>
+                                        </div>
+                                        <div class="tab-pane fade active in" id="signin">
+                                            <form class="form-horizontal">
+                                                <fieldset>
+
+<!-- Sign In Form -->
+<!-- Text input-->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="userid">Alias:</label>
+                                                        <div class="controls">
+                                                            <input required="" id="userid" name="userid" type="text" class="form-control input-medium" placeholder="JoeSixpack@aol.com">
+                                                        </div>
+                                                    </div>
+
+<!-- Password input-->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="passwordinput">Password:</label>
+                                                        <div class="controls">
+                                                            <input required="" id="passwordinput" name="passwordinput" class="form-control input-medium" type="password" placeholder="********">
+                                                        </div>
+                                                    </div>
+
+<!-- Multiple Checkboxes (inline) -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="rememberme"></label>
+                                                        <div class="controls">
+                                                            <label class="checkbox inline" for="rememberme-0">
+                                                                <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                                                                Remember me
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+<!-- Button -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="signin"></label>
+                                                        <div class="controls">
+                                                            <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="signup">
+                                            <form class="form-horizontal">
+                                                <fieldset>
+<!-- Sign Up Form -->
+<!-- Text input-->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="Email">Email:</label>
+                                                        <div class="controls">
+                                                            <input id="Email" name="Email" class="form-control input-large" type="text" placeholder="JoeSixpack@sixpacksrus.com" required="">
+                                                        </div>
+                                                    </div>
+
+<!-- Text input-->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="userid">Alias:</label>
+                                                        <div class="controls">
+                                                            <input id="userid" name="userid" class="form-control input-large" type="text" placeholder="JoeSixpack" required="">
+                                                        </div>
+                                                    </div>
+
+<!-- Password input-->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="password">Password:</label>
+                                                        <div class="controls">
+                                                            <input id="password" name="password" class="form-control input-large" type="password" placeholder="********" required="">
+                                                            <em>1-8 Characters</em>
+                                                        </div>
+                                                    </div>
+
+<!-- Text input-->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+                                                        <div class="controls">
+                                                            <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********" required="">
+                                                        </div>
+                                                    </div>
+
+<!-- Multiple Radios (inline) -->
+                                                    <br>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="humancheck">Humanity Check:</label>
+                                                        <div class="controls">
+                                                            <label class="radio inline" for="humancheck-0">
+                                                                <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot
+                                                            </label>
+                                                            <label class="radio inline" for="humancheck-1">
+                                                                <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+ <!-- Button -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="confirmsignup"></label>
+                                                        <div class="controls">
+                                                            <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <center>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--End Login-->
+
+<!--End carousel-->
+
+<div>
+    <div class="navbar-header">
+        <nav>
+            <ul class="list-unstyled main-menu">
+
+            <!--Include your navigation here-->
+                <li class="text-left">
+                    <a href="#" id="nav-close">
+                    CODE CRUNCH
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="tracks.html">
+                        <i class="fa fa-road">            
+                        </i> Tracks 
+                        <span class="icon">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="modules.html">
+                        <i class="fa fa-fw fa-wrench">
+                        </i>
+                        Create Modules
+                        <span class="icon">        
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="students.html">
+                        <i class="fa fa-graduation-cap">
+                        Students
+                        </i>
+                        <span class="icon">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+         <div class="navbar navbar-fixed-top" style="background-color: black">      
+
+    <!--Include your brand here-->
+            <div class="navbar-header pull-left">
+              <a id="nav-expander" class="nav-expander fixed">
+                MENU &nbsp;<i class="fa fa-bars fa-lg white"></i>
+              </a>
+            </div>
+
+      <!-- Top Menu Items Begin-->
+        <ul class="nav navbar-right top-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                <ul class="dropdown-menu message-dropdown">
+                    <li class="message-preview">
+                        <a href="#">
+                            <div class="media">
+                                <span class="pull-left">
+                                    <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                </span>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><strong>John Smith</strong>
+                                    </h5>
+                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="message-preview">
+                        <a href="#">
+                            <div class="media">
+                                <span class="pull-left">
+                                    <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                </span>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><strong>John Smith</strong>
+                                    </h5>
+                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="message-preview">
+                        <a href="#">
+                            <div class="media">
+                                <span class="pull-left">
+                                    <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                </span>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><strong>John Smith</strong>
+                                    </h5>
+                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="message-footer">
+                        <a href="#">Read All New Messages</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                <ul class="dropdown-menu alert-dropdown">
+                    <li>
+                        <a href="#">Congrats! you have <span class="label label-default">42 Points!</span></a>
+                    </li>
+                    <li>
+                        <a href="#">You have earned <span class="label label-primary">Elite Haxxor Badge</span></a>
+                    </li>
+                    <li>
+                        <a href="#">You have earned <span class="label label-success">Enter your name Badge</span></a>
+                    </li>
+                    <li>
+                        <a href="#">You have earned <span class="label label-info">Cake Badge</span></a>
+                    </li>
+                    <li>
+                        <a href="#">You have earned <span class="label label-warning">Ruby on Rails Badge</span></a>
+                    </li>
+                    <li>
+                        <a href="#">You have earned <span class="label label-danger">Solving Sean's Puzzle Badge</span></a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">View All</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#signup"
+                    data-toggle="modal" 
+                    data-target=".bs-modal-sm">
+                    <i class="fa fa-user">    
+                    </i> Login 
+                </a>
+            </li>
+        </ul>
+
+            <!-- Top Menu Items End-->
+    </div>       
+</div>
+
+
+<!--Drop down test end-->
+
+        <div id="page-wrapper"  style="background-color: lightgrey">
+            <div class="container-fluid" id="content">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                        Tracks
+                            <small>Subheading</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-file"></i> Blank Page
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="panel-group" id="accordion">
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                    <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                    &nbsp;Track 1
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="col-sm-9">
+                                    Module 1
+                                    </div>
+                                    <div class="col-sm-2 text-right">
+                                        <button>test</button>
+                                    </div>
+                                    <div class="col-sm-1 text-right">
+                                        <button>add</button>
+                                    </div>
+                                </div>
+                                  <div class="panel-body">
+                                    <div class="col-sm-9">
+                                    Module 2
+                                    </div>
+                                    <div class="col-sm-2 text-right">
+                                        <button>test</button>
+                                    </div>
+                                    <div class="col-sm-1 text-right">
+                                        <button>add</button>
+                                    </div>
+                                </div>
+                                  <div class="panel-body">
+                                    <div class="col-sm-9">
+                                    Module 3
+                                    </div>
+                                    <div class="col-sm-2 text-right">
+                                        <button>test</button>
+                                    </div>
+                                    <div class="col-sm-1 text-right">
+                                        <button>add</button>
+                                    </div>
+                                </div>
+                                <div class="panel-footer text-right">
+                                    <button>AddModule</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                &emsp;Track 2</a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                &emsp;Track 3</a>
+                              </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                &emsp;Track 4</a>
+                                </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                &emsp;Track 5</a>
+                                </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                &emsp;Track 6</a>
+                                </h4>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                &emsp;Track 7</a>
+                                </h4>
+                            </div>
+                            <div id="collapse6" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                &emsp;Tradck 8</a>
+                                </h4>
+                            </div>
+                            <div id="collapse7" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+        <footer><button class="btn btn-default btn-primary footerbutton align-center">Add Track</button></footer>
+
+
+            
+
+
+       
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+   <!-- <script src="js/plugins/morris/raphael.min.js"></script>-->
+    <script src="js/plugins/morris/morris.min.js"></script>
+   <!-- <script src="js/plugins/morris/morris-data.js"></script>-->
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<div class="container" id="darkBlue">
+    <div class="container">
+        <div class="jumbotron" id="JumboOne">
+            <h1>Browse Bootcamp Sets</h1>
+            <p>Code sets from the most progressive, software developing bootcamps in the world</p>
+        </div>
+        <input type="text" name="search" placeholder="s e a r c h" id="searchBar" ng-mouseenter="getTracks">
+        <br>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-click="getTracks">tracks</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-click="getModules">modules</button>
+            </div>
+        </div>
+        <div class="jumbotron" id="whiteGround">
+            <h1 id="TitleSet">Tracks</h1>
+            <hr id="underLine">
+            <h2 id="Title">Tracks</h2>
+            <div id="headerBar"></div>
+            <div id="scrollTracks">
+                <table>
+                    <tr>
+                        <td ng-repeat="track in browseTracks.tracks">
+                            <h3>{{track}}</h3>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="headerBar"></div>
+            <h2 id="Title2">Popular</h2>
+            <div id="headerBar"></div>
+            <div id="scrollTracksTwo">
+                    <table>
+                    <tr>
+                        <td ng-click="updateModules" ng-repeat="module in browseTracks.modules">
+                            <h3>{{module}}</h3>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="headerBar"></div>
+        </div>
+    </div>
+</div>

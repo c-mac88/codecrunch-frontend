@@ -1,0 +1,16 @@
+            <div ng-repeat="question in discussion.questions">
+                <h3>{{question.text}}</h3>
+                <div>{{question.userName}}</div>
+                <div>{{question.createdDate}}</div>
+                <button class="btn btn-primary" ng-click="discussion.upVoteQuestion(question.moduleQuestionId)">Up Votes: {{question.upVote}}</button>
+                <button class="btn btn-primary" ng-click="discussion.downVoteQuestion(question.moduleQuestionId)">Down Votes: {{question.downVote}}</button>
+                <div ng-repeat="answer in question.moduleAnswers">
+                    <h3>Answer {{$index}}</h3>
+                    <div>{{answer.text}}</div>
+                    <div>{{answer.userName}}</div>
+                    <div>{{answer.createdDate}}</div>
+                    <button class="btn btn-primary" ng-click="$parent.discussion.upVoteAnswer(answer.moduleAnswerId)">Up Votes: {{answer.upVote}}</button>
+                    <button class="btn btn-primary" ng-click="$parent.discussion.downVoteAnswer(answer.moduleAnswerId)">Down Votes: {{answer.downVote}}</button>
+                </div>
+            </div>
+

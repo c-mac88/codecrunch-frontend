@@ -1,0 +1,39 @@
+#content{
+	height: 650px;
+}
+
+.trackContainer {
+	margin-bottom: 30px;
+}
+.col-sm-12{
+	border-bottom: 1px solid grey;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+
+}
+footer {
+position: fixed;
+bottom: 0;
+height: 30px; 
+align-content: center;
+}
+.footerbutton{
+	margin-left: 600px;
+	
+}
+.discussionWrapper h1, h4{
+    color: white;
+    
+}
+
+.qa{
+    border: 2px solid white;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: #262626;
+    font-size: 1.5em;
+}
+.col-md-1{
+    line-height: 120px;
+}

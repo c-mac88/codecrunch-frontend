@@ -1,0 +1,70 @@
+{
+  "name": "codecrunch",
+  "main": "index.js",
+  "homepage": "https://github.com/mwhitmore1/07-VSTDA",
+  "authors": [
+    "Michael Whitmore <mwhitmorelaw@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.6",
+    "toastr": "^2.1.2",
+    "jquery": "^2.2.4",
+    "ng-sortable": "^1.3.6",
+    "angular-ui-router": "^0.3.0",
+    "angular-local-storage": "^0.2.7",
+    "angular-toastr": "^1.7.0",
+    "angular-mocks": "^1.5.5",
+    "jquery-easing": "*",
+    "wow": "^1.1.2",
+    "font-awesome": "^4.6.3",
+    "bootstrap-formhelpers": "^2.3.0",
+    "navgoco": "^0.2.1",
+    "angular-xeditable": "^0.1.12"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.min.css",
+        "dist/js/bootstrap.min.js"
+      ]
+    },
+    "bootstrap-formhelpers": {
+      "main": [
+        "dist/css/bootstrap-formhelpers.min.css",
+        "dist/js/bootstrap-formhelpers.min.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    },
+    "navgoco": {
+      "main": [
+        "src/jquery.navgoco.min.js",
+        "src/jquery.navgoco.css"
+      ]
+    },
+    "angular-xeditable": {
+      "main": [
+        "dist/css/xeditable.css",
+        "dist/js/xeditable.min.js"
+      ]
+    }
+  },
+  "resolutions": {
+    "jquery": "2.2.4",
+    "font-awesome": "~4.2.0",
+    "bootstrap": "^3.3.6"
+  }
+}

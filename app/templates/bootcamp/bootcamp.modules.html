@@ -1,0 +1,87 @@
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                            Modules You've Created
+                        </h1>
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> Learning Modules
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="fa fa-info-circle"></i> <strong>Have questions?</strong> Contact us! <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">Twitter us</a> @code_crunch.com
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <button ng-hide="bootcampModules.addNewModules" ng-click="bootcampModules.addNewModules=true" type="button" class="btn btn-default">Add Module</button>
+    </div>
+    <div ng-hide="!bootcampModules.addNewModules" class="row">
+        <div id="modulePanel" class="panel panel-primary col-lg-3 col-md-6">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div>
+                            <h4>Module Name:</h4>
+                            <a href="#" editable-text="bootcampModules.newModule.moduleName">{{bootcampModules.newModule.moduleName || "click"}}</a>
+                        </div>
+                        <div>
+                            <h4>Module Description:</h4>
+                            <a href="#" editable-text="bootcampModules.newModule.moduleDescription">{{bootcampModules.newModule.moduleDescription || "click"}}</a>
+                        </div>
+                    </div>
+                </div>
+                <button ng-show="!vm.addNewModule" ng-click="bootcampModules.addModule()" type="button" class="btn btn-default">Submit</button>
+            </div>
+            <div id="moduleChapterList" class="panel-footer">
+                <button ng-click="bootcampModules.addNewModules=false" type="button" class="btn btn-default">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div id="" class="row">
+        <div id="modulePanel" ng-repeat="module in bootcampModules.modules" class="panel panel-primary col-lg-3 col-md-6">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div>{{module.moduleName}}</div>
+                        <div>{{module.moduleDescription}}</div>
+                    </div>
+                </div>
+            </div>
+            <div id="moduleChapterList" class="panel-footer">
+                <a id="chapterList" ng-repeat="chapter in module.chapters">
+                    <div id="chapter" ng-click="bootcampModules.showChapter(chapter)">
+                        <span class="pull-left">{{chapter.chapterName}}</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div ng-show="bootcampModules.Show===chapter.chapterId">
+                        <span><h3><b>{{chapter.chapterName}}</b></h3></span>
+                        <br>
+                        <span><h4><b>Chapter Description:</b></h4></span>
+                        <span>{{chapter.chapterDescription}}</span>
+                        <br>
+                        <span><h4><b>Chapter Content: </b></h4></span>
+                        <br>
+                        <span>{{chapter.chapterContent}}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

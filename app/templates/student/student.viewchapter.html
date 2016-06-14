@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                            <label for="chapterName" ng-model="studentViewChapter.Chapter.Name">{{studentViewChapter.chapter.name}}</label>
+                            <button type="checkbox" checked data-toggle="toggle" class="btn btn-primary btn-xs" id="likes">
+                            <span class="glyphicon glyphicon-thumbs-up fa-2x"></span> 
+                            </button>
+                        </h1>
+            <ol class="breadcrumb">
+                <li class="active">
+                    <fieldset class="form-group">
+                        <label for="chapterDescription">Chapter Description</label>
+                        <div ng-model="studentViewChapter.Chapter.Description">
+                            {{studentViewChapter.chapter.cescription}}
+                        </div>
+                    </fieldset>
+                    <!-- <span class="glyphicon glyphicon-education"></span> Learn shit here -->
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="fa fa-info-circle"></i> <strong>Have questions?</strong> Contact us! <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">Twitter us</a> @code_crunch.com
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <form>
+        <fieldset class="form-group">
+            <label for="chapterContent">Chapter Content</label>
+            <div ng-model="studentViewChapter.Chapter.Content">{{studentViewChapter.chapter.content}}
+            </div>
+        </fieldset>
+    </form>
+    <form>
+        <div class="text-center">
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-hand-left text-muted"></span> Previous Chapter</button>
+                <button type="button" class="btn btn-success btn-sm"> Next Chapter <span class="glyphicon glyphicon-hand-right text-muted"></span></button>
+            </div>
+        </div>
+    </form>
+    <!-- /.row -->
+</div>
+<!-- /.container-fluid -->

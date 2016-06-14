@@ -1,0 +1,159 @@
+<div id="wrapper" ng-controller="TracksController as track">
+        <!-- Navigation -->
+        <div id="page-wrapper">
+            <div class="container-fluid" id="content">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                        Tracks
+                            <small>Subheading</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-file"></i> Tracks
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="panel-group" id="accordion">
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                    <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                    Rails Development
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="col-sm-10">
+                                        Module 1
+                                    </div>
+                                    <div class="col-sm-2 text-right">
+                                        <button>Preview</button>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-sm-10">
+                                        Module 2
+                                    </div>
+                                    <div class="col-sm-2 text-right">
+                                        <button>Preview</button>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-sm-10">
+                                        Module 3
+                                    </div>
+                                    <div class="col-sm-2 text-right">
+                                        <button>Preview</button>
+                                    </div>
+                                </div>
+                                <div class="panel-footer text-right">
+                                    <button>AddModule</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                Android Development</a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                PHP Development</a>
+                              </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                Web Design</a>
+                                </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 trackContainer" ng-repeat="track in track.tracks" ng-init="track.getTrack()">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                                    <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
+                                    &nbsp;{{track.trackName}}
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse9" class="panel-collapse collapse" ng-repeat="module in track.modules">
+                                <div class="panel-body">
+                                    <div class="col-sm-10">
+                                        Module 1
+                                    </div>
+                                    <div class="col-sm-2 text-right">
+                                        <button class="btn btn-default btn-sm">Preview</button>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-sm-10">
+                                        Module 2
+                                    </div>
+                                    <div class="col-sm-2 text-right">
+                                        <button class="btn btn-default btn-sm">Preview</button>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-sm-10">
+                                        Module 3
+                                    </div>
+                                    <div class="col-sm-2 text-right">
+                                        <button class="btn btn-default btn-sm">Preview</button>
+                                    </div>
+                                </div>
+                                <div class="panel-footer text-right">
+                                    <button class="btn btn-primary">AddModule</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+            <button class="btn default btn-primary btn-lg footerbutton align-center btn-block">Add Track</button>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+

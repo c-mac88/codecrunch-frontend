@@ -1,0 +1,106 @@
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                            Add Chapter
+                        </h1>
+            <ol class="breadcrumb">
+                <li class="active">
+                    <span class="glyphicon glyphicon-plus-sign"></span> Create Chapters Here
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="fa fa-info-circle"></i> <strong>Have questions?</strong> Contact us! <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">Twitter us</a> @code_crunch.com
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <form>
+        <fieldset class="form-group">
+            <label for="chapterName">Chapter Name</label>
+            <input ng-model="bootcampAddChapter.Chapter.Name" type="text" class="form-control" id="" placeholder="New chapter name">
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="chapterDescription">Chapter Description <small>(optional)</small></label>
+            <input ng-model="bootcampAddChapter.Chapter.Description" type="text" class="form-control" placeholder="New Chapter Description">
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="chapterContent">Chapter Content</label>
+            <textarea ng-model="bootcampAddChapter.Chapter.Content" class="form-control" rows="5"></textarea>
+            <p>
+                <button type="button" class="btn btn-default btn-xs pull-right">Include Video</button>
+            </p>
+        </fieldset>
+    </form>
+    <form>
+        <div class="text-center">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary inline-block">Add Chapter</button>
+                <button ng-click="bootcampAddChapter.preview=true" type="button" class="btn btn-warning inline-block">Preview Chapter</button>
+            </div>
+        </div>
+    </form>
+    <!-- /.row -->
+</div>
+<!-- /.container-fluid -->
+</div>
+<div id="page-wrapper" style="background-color:lightgrey;" ng-show=bootcampAddChapter.preview>
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                            Preview Chapter
+                        </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <span class="glyphicon glyphicon-open-file"></span> Preview Chapter Here
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="alert alert-info alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <i class="fa fa-info-circle"></i> <strong>Have questions?</strong> Contact us! <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">Twitter us</a> @code_crunch.com
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <form>
+            <fieldset class="form-group">
+                <label for="chapterName">Chapter Name</label>
+                <div>{{bootcampAddChapter.Chapter.Name}}
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="chapterDescription">Chapter Description <small>(optional)</small></label>
+                <div>{{bootcampAddChapter.Chapter.Description}}
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="chapterContent">Chapter Content</label>
+                <div>{{bootcampAddChapter.Chapter.Content}}
+                </div>
+            </fieldset>
+        </form>
+        <form>
+            <div class="text-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary inline-block" ng-click="bootcampAddChapter.preview=false">Back</button>
+                </div>
+            </div>
+        </form>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
