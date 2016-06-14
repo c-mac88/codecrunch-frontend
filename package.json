@@ -33,5 +33,9 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "wiredep": "^4.0.0"
+  },
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.13.4"
   }
 }
