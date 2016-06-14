@@ -40,5 +40,5 @@
                 .state('student.viewchapter', { url: '/viewchapter', templateUrl: '/templates/student/student.viewchapter.html', controller: 'StudentViewChapterController as studentViewChapter' })
             $httpProvider.interceptors.push('authInterceptor');
         })
-        .value('apiUrl', 'http://localhost:57079/api/');
+        .value('apiUrl', 'https://codecrunchapi.azurewebsites.net/api/');
 })();

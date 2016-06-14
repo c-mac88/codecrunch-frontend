@@ -4,9 +4,9 @@
     angular
         .module('app')
         .factory('authService', authService);
-    authService.$inject = ['$q', '$http', 'localStorageService', '$location', '$state'];
+    authService.$inject = ['apiUrl','$q', '$http', 'localStorageService', '$location', '$state'];
 
-    function authService($q, $http, localStorageService, $location, $state) {
+    function authService(apiUrl,$q, $http, localStorageService, $location, $state) {
         var state = {
             loggedIn: true
         };
@@ -19,7 +19,7 @@
             init: init
         };
 
-        var apiUrl = 'http://localhost:57079/';
+        
         return service;
 
 
