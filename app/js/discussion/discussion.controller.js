@@ -5,13 +5,13 @@
         .module('app')
         .controller('DiscussionController', DiscussionController);
 
-    DiscussionController.$inject = ['serviceGenerator', 'apiUrl', '$http', '$state'];
+    DiscussionController.$inject = ['$stateParams', 'serviceGenerator', 'apiUrl', '$http', '$state'];
 
     /* @ngInject */
-    function DiscussionController(serviceGenerator, apiUrl, $http, $state) {
+    function DiscussionController($stateParams, serviceGenerator, apiUrl, $http, $state) {
         var vm = this;
         vm.title = 'DiscussionController';
-        var moduleId = 1;
+        var moduleId = $stateParams.moduleId;
         var url = apiUrl + 'Modules/' + moduleId + '/Questions';
         var questionsForModule = serviceGenerator(url, 'Questions');
         console.log(url);

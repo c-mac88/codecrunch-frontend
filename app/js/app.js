@@ -24,7 +24,7 @@
 
             $stateProvider
                 .state('home', { url: '/home', templateUrl: '/templates/home/home.html', controller: 'HomeController as home' })
-                .state('discussion', { url: '/discussion', templateUrl: '/templates/discussion.html', controller: 'DiscussionController as discussion' })
+                .state('discussion', { url: '/discussion?moduleId', templateUrl: '/templates/discussion/discussion.html', controller: 'DiscussionController as discussion' })
                 .state('browseTracks', { url: '/browseTracks', templateUrl: '/templates/home/browseTracks.html', controller: 'BrowseTracksController as browseTracks' })
                 .state('bootcamp', { url: '/bootcamp', templateUrl: '/templates/bootcamp/bootcamp.index.html', controller: 'BootcampController as bootcamp' })
                 .state('bootcamp.dashboard', { url: '/dashboard', templateUrl: '/templates/bootcamp/bootcamp.dashboard.html', controller: 'BootcampDashboardController as bootcampDashboard' })
@@ -40,5 +40,6 @@
                 .state('student.viewchapter', { url: '/viewchapter', templateUrl: '/templates/student/student.viewchapter.html', controller: 'StudentViewChapterController as studentViewChapter' })
             $httpProvider.interceptors.push('authInterceptor');
         })
-        .value('apiUrl', 'https://codecrunchapi.azurewebsites.net/api/');
+         .value('apiUrl', 'https://codecrunchapi.azurewebsites.net/api/');
+        //.value('apiUrl', 'http://localhost:57079/api/');
 })();

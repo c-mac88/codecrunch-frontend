@@ -1,142 +1,46 @@
-<div class="container-fluid discussionWrapper" ng-controller="DiscussionController">
-    <div class="">
+<div class="container-fluid discussionWrapper">
+    <div ng-repeat="question in discussion.questions" class="">
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-10 qa">
-                    <div class="col-md-10">
-                        <h4 class="text-left">Question:</h4>
-                        <p>Cras justo odio Cras justo odio Cras justo odio???</p>
-                        <small>by username at time</small>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <p>{{question.userName}}</p>
+                            <p>{{question.createdDate | date: 'MM/dd/yy'}}</p>
+                            <h4>{{question.text}}</h4>
+                        </div>
+                        <div class="col-md-1">
+                            <a ng-click="discussion.upVoteQuestion(question.moduleQuestionId)">
+                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">{{question.upVote}}</span>
+                            </a>
+                        </div>
+                        <div class="col-md-1">
+                            <a ng-click="discussion.downVoteQuestion(question.moduleQuestionId)">
+                                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true">{{question.downVote}}</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-md-1">
-                        <a href="" ng-click="">
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-1">
-                        <a href="#" ng-click="">
-                            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-12">
+                    <!--                     <div class="col-md-12">
                         <h4 class="text-right"><a ng-click="toShow =!toShow">Click for Answers!</a></h4>
-                    </div>
-                    <div ng-show="toShow">
+                    </div> -->
+                    <div ng-repeat="answer in question.moduleAnswers">
                         <div class="answerRow">
                             <div class="col-md-10">
-                                <h4 class="text-left">Answers:</h4>
-                                <p>Cras justo odio <small>by username at time</small></p>
-                                <small>by username at time</small>
+                                <p>Answer {{$index + 1}}</p>
+                                <h4>{{answer.text}}</h4>
+                                <p>{{answer.userName}}</p>
+                                <p>{{answer.createdDate | date: 'MM/dd/yy'}}</p>
                             </div>
                             <div class="col-md-1">
-                                <a href="#" ng-click="">
-                                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                <a ng-click="$parent.discussion.upVoteAnswer(answer.moduleAnswerId)">
+                                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">{{answer.upVote}}</span>
                                 </a>
                             </div>
                             <div class="col-md-1">
-                                <a href="#" ng-click="">
-                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                <a ng-click="$parent.discussion.downVoteAnswer(answer.moduleAnswerId)">
+                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true">{{answer.downVote}}</span>
                                 </a>
                             </div>
-                        </div>
-                        <div class="answerRow">
-                            <div class="col-md-10">
-                                <h4 class="text-left">Answers:</h4>
-                                <p>Cras justo odio <small>by username at time</small></p>
-                                <small>by username at time</small>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="#" ng-click="">
-                                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="#" ng-click="">
-                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-10 qa">
-                    <div class="col-md-10">
-                        <h4 class="text-left">Question:</h4>
-                        <p>Cras justo odio Cras justo odio Cras justo odio???</p>
-                    </div>
-                    <div class="col-md-1">
-                        <a href="" ng-click="">
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-1">
-                        <a href="#" ng-click="">
-                            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4 class="text-right"><a ng-click="toShows =!toShows">Click for answers!</a></h4>
-                    </div>
-                    <div ng-show="toShows">
-                        <div class="col-md-10">
-                            <h4 class="text-left">Answers:</h4>
-                            <ul>
-                                <li>Cras justo odio</li>
-                                <br>
-                                <li class="text-left">Cras justo odio</li>
-                                <br>
-                                <li class="text-left">Cras justo odio</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-1">
-                            <a href="#" ng-click="">
-                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                            </a>
-                        </div>
-                        <div class="col-md-1">
-                            <a href="#" ng-click="">
-                                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-10 qa">
-                    <div class="col-md-10">
-                        <h4 class="text-left">Question:</h4>
-                        <p>Cras justo odio Cras justo odio Cras justo odio???</p>
-                    </div>
-                    <div class="col-md-1">
-                        <a href="" ng-click="">
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-1">
-                        <a href="#" ng-click="">
-                            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-12">
-                        <h4 class="text-right"><a ng-click="toShows =!toShows">Click for answers!</a></h4>
-                    </div>
-                    <div ng-show="toShows">
-                        <div class="col-md-10">
-                            <h4 class="text-left">Answers:</h4>
-                            <ul>
-                                <li>Cras justo odio</li>
-                                <br>
-                                <li class="text-left">Cras justo odio</li>
-                                <br>
-                                <li class="text-left">Cras justo odio</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-1">
-                            <a href="#" ng-click="">
-                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                            </a>
-                        </div>
-                        <div class="col-md-1">
-                            <a href="#" ng-click="">
-                                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -144,5 +48,3 @@
         </div>
     </div>
 </div>
-
-
