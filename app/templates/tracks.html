@@ -111,13 +111,13 @@
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                                    <a ng-click="toShow = !toShow">
                                     <span class="glyphicon glyphicon-education glyphicon-align-left" aria-hidden="true"></span>
                                     &nbsp;{{track.trackName}}
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapse9" class="panel-collapse collapse" ng-repeat="module in track.modules">
+                            <div ng-show="toShow" class="panel-collapse collapse" ng-repeat="module in track.modules">
                                 <div class="panel-body">
                                     <div class="col-sm-10">
                                         Module 1
