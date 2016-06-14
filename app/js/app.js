@@ -19,7 +19,7 @@
     }])
 
     .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-
+            // Imaginary change by Cameron - never forget!
             $urlRouterProvider.otherwise("/home");
 
             $stateProvider
