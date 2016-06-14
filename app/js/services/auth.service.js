@@ -19,7 +19,7 @@
             init: init
         };
 
-        
+        var apiUrl = 'https://codecrunchapi.azurewebsites.net/';
         return service;
 
 
